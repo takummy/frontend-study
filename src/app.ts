@@ -1,16 +1,33 @@
+import $ from 'jquery';
+
+type Book = {
+  id: number,
+  title: string,
+  author: string,
+  overview: string,
+  image: string,
+  reviews: Review[]
+}
+type Review = {
+  id: number,
+  username: string,
+  comment: string,
+  like: number
+}
+
 $(function() {
   $.ajax('http://localhost:1323/books')
     .done(function(books) {
       books.forEach(appendBook)
 
-      $('.js-toggle-review').on('click', function(event) {
+      $('.js-toggle-review').on('click', function(_event) {
         var bookId = $(this).data('bookId')
         $('.js-review[data-book-id="' + bookId + '"]').toggle('fast')
 
         return false
       })
 
-      $(document).on('click', '.js-like', function(event) {
+      $(document).on('click', '.js-like', function(_event) {
         var likeCountElement = $(this).find('.js-like-count')
         likeCountElement.text(likeCountElement.text() + 1)
 
@@ -35,7 +52,7 @@ $(function() {
     })
 })
 
-function appendBook(book) {
+function appendBook(book: Book) {
   $('#js-book-list').append($(
     '<li class="book-list__item">' +
       '<div class="book-list__item__inner">' +
@@ -64,7 +81,7 @@ function appendBook(book) {
   ))
 }
 
-function createBookReview(review) {
+function createBookReview(review: Review) {
   return (
     '<li class="review__list__item">' +
       '<p class="review__list__item__name">' + review.username + 'さんの感想・評価</p>' +
