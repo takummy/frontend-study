@@ -1,18 +1,18 @@
 import $ from 'jquery';
 
 type Book = {
-  id: number,
-  title: string,
-  author: string,
-  overview: string,
-  image: string,
-  reviews: Review[]
+  id: number;
+  title: string;
+  author: string;
+  overview: string;
+  image: string;
+  reviews: Review[];
 }
 type Review = {
-  id: number,
-  username: string,
-  comment: string,
-  like: number
+  id: number;
+  username: string;
+  comment: string;
+  like: number;
 }
 
 $(function() {
