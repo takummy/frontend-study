@@ -6,14 +6,14 @@ $(function () {
   $.ajax('http://localhost:1323/books').done(function (books) {
     books.forEach(appendBook);
 
-    $('.js-toggle-review').on('click', function (_event) {
+    $('.js-toggle-review').on('click', function () {
       const bookId = $(this).data('bookId');
       $('.js-review[data-book-id="' + bookId + '"]').toggle('fast');
 
       return false;
     });
 
-    $(document).on('click', '.js-like', function (_event) {
+    $(document).on('click', '.js-like', function () {
       const likeCountElement = $(this).find('.js-like-count');
       likeCountElement.text(likeCountElement.text() + 1);
 
