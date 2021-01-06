@@ -1,10 +1,11 @@
 import $ from 'jquery';
-import createBookReview from './createBookReview';
 import { Book } from './constants/createBookReview';
+import createBookListItem from './createBookListItem';
+import createBookReview from './createBookReview';
 
 $(function () {
   $.ajax('http://localhost:1323/books').done(function (books) {
-    books.forEach(appendBook);
+    books.forEach((book: Book) => $('#js-book-list').append($(createBookListItem(book))))
 
     $('.js-toggle-review').on('click', function () {
       const bookId = $(this).data('bookId');
