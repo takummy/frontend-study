@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { createBookReview } from './createBookReview';
+import createBookReview from './createBookReview';
 import { Book } from './constants/createBookReview';
 
 $(function () {

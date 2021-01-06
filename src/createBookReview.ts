@@ -1,6 +1,6 @@
 import { Review } from './constants/createBookReview';
 
-export function createBookReview(review: Review) {
+export default function createBookReview(review: Review) {
   return (
     '<li class="review__list__item">' +
     '<p class="review__list__item__name">' +
