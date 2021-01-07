@@ -126,7 +126,7 @@ module.exports = {
 
   // The paths to modules that run some code to configure or set up the testing environment before each test
   // setupFiles: [],
-  setupFilesAfterEnv: ['<rootDir>/src/setupEnzyme.ts'],
+  // setupFilesAfterEnv: ['<rootDir>/src/setupEnzyme.ts'],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
   // setupFilesAfterEnv: [],
@@ -136,7 +136,7 @@ module.exports = {
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
+  // snapshotSerializers: ['enzyme-to-json/serializer'],
 
   // The test environment that will be used for testing
   // testEnvironment: "jest-environment-jsdom",
@@ -176,7 +176,7 @@ module.exports = {
   // A map from regular expressions to paths to transformers
   // transform: undefined,
   transform: {
-    '^.+\\.tsx?$': 'babel-jest'
+    '^.+\\.ts$': 'ts-jest'
   }
 
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
