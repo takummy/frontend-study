@@ -14,9 +14,12 @@
   "devDependencies": {
     "@babel/core": "^7.12.10",
     "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
     "@babel/preset-typescript": "^7.12.7",
     "@types/jest": "^26.0.19",
     "@types/jquery": "^3.5.5",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
     "@typescript-eslint/eslint-plugin": "^4.11.1",
     "@typescript-eslint/parser": "^4.11.1",
     "babel-loader": "^8.2.2",
@@ -34,6 +37,8 @@
   },
   "dependencies": {
     "eslint": "^7.17.0",
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   }
 }
