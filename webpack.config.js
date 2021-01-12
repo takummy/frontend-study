@@ -23,3 +23,7 @@ export const module = {
     }
   ]
 };
+export const devServer = {
+  contentBase: __dirname,
+  port: 5000
+};

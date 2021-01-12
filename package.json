@@ -6,6 +6,7 @@
   "author": "takummy",
   "license": "MIT",
   "scripts": {
+    "serve": "webpack-dec-server",
     "build": "webpack",
     "lint:ts": "tsc --noEmit",
     "eslint": "eslint ./src --ext ts,tsx",
@@ -33,7 +34,8 @@
     "ts-jest": "^26.4.4",
     "typescript": "^4.1.3",
     "webpack": "^5.11.1",
-    "webpack-cli": "^4.3.1"
+    "webpack-cli": "^4.3.1",
+    "webpack-dev-server": "^3.11.1"
   },
   "dependencies": {
     "eslint": "^7.17.0",
